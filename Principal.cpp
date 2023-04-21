@@ -3,30 +3,28 @@
 
 using namespace std;
 
-int main()
+int main(int argc, char const *argv[])
 {
-    while (1==1){
-int fecha, opc,ventas,boletos,costo,kilometros,calcular,elegir=0;
-system("cls");
-cout << "*-TRANSPORTE DAVID-*" <<endl;
-cout << "Escoge una de las opciones" << endl;
-cout << "1. Informacion del dia a dia" << endl;
-cout << "2. Informacion de buses" << endl;
-cout << "3. Itinerario" << endl;
-cout << "4. Salir" << endl;
-cin >> elegir;
+    int opc, elegir = 0;
+    do
+    {
 
-switch (elegir)
-{
-case 1:
-    system ("cls");
-    infoDia(fecha, opc,ventas,boletos,costo,kilometros,calcular);
-    system ("pause");
-    break;
+        elegir = menu();
 
-default:
-    break;
-}
+        switch (elegir)
+        {
+        case 1:
+            system("cls");
+            infoDia(opc);
+            system("pause");
+            break;
 
-}
+        default:
+            cout << "Opcion digitada no es valida...\n";
+            system("pause");
+            break;
+        }
+
+    } while (opc != 4);
+    return 0;
 }
