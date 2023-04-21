@@ -19,7 +19,9 @@ cin >> elegir;
 switch (elegir)
 {
 case 1:
+    system ("cls");
     infoDia(fecha, opc,ventas,boletos,costo,kilometros,calcular);
+    system ("pause");
     break;
 
 default:
