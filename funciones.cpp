@@ -58,7 +58,8 @@ int infoDia(int opc)
         break;
     
     case 2:
-        int fecha, kilometros, ventas;
+        int kilometros, ventas;
+        char fecha[9];
         system("cls");
         system("color 03");
 
